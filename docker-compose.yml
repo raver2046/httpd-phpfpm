@@ -1,0 +1,28 @@
+version: '3'
+services:
+  httpd:
+    build:
+      context: .
+      dockerfile: httpd.Dockerfile
+    ports:
+      - 80:80
+      - 443:443  
+    volumes:
+      - /home/php:/var/www/html
+    networks:
+      - httpdphpfpm
+
+  phpfpm:
+    build:
+        context: .
+        dockerfile: php.Dockerfile
+    expose:
+      - 9000
+    volumes:
+      - /home/php:/var/www/html
+    networks:
+      - httpdphpfpm
+
+networks:
+  httpdphpfpm:
+    driver: bridge
