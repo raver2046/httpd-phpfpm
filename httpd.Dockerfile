@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:11-slim
 
 ENV http_proxy http://10.10.10.10:3128
 ENV ftp_proxy=http://10.10.10.10:3128
