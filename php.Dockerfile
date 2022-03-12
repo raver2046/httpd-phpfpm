@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-buster
+FROM php:7.3.33-fpm-buster
 
 ENV http_proxy http://10.10.10.10:3128
 ENV ftp_proxy=http://10.10.10.10:3128
