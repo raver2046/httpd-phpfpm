@@ -1,4 +1,4 @@
-FROM debian:12.9-slim
+FROM debian:bookworm-20250929-slim
 
 ENV http_proxy http://10.10.10.10:3128
 ENV ftp_proxy=http://10.10.10.10:3128
